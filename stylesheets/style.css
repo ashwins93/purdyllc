@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: normal 16px sans-serif;
+}
+
+body {
+    background-color: #EFEBE9;
+    position: relative;
+    font-family: Lora;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    padding: 30px 200px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+header h2 > a {
+    color: #FAFAFA;
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border: 1px solid #666;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+header nav {
+    display: flex;
+    list-style-type: none;
+}
+
+header > nav > li > a {
+    margin: 0 20px;
+    color: #FAFAFA;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+header > nav > li > a:hover {
+    opacity: 1;
+}
+
+section.hero {
+    background-image: url("../images/hero.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-clip: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.hero h1 {
+    color: #FAFAFA;
+    font-family: Montserrat, sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1)
+    ;
+    transform: translate(0,50px);
+    opacity: 0;
+    animation: 0.8s slidein forwards;
+}
+
+.hero p {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.13);
+    padding: 5px 10px;
+    margin: 20px 0;
+    font-size: 20px;
+    transform: translate(-50px, 0);
+    opacity: 0;
+    animation: 0.2s slidein 0.8s forwards;
+}
+
+.hero a.btn {
+    transform: translate(50px, 0);
+    opacity: 0;
+    animation: 0.2s slidein 0.8s forwards;
+}
+
+.btn {
+    padding: 15px 20px;
+    background-color: #263238;
+    text-decoration: none;
+    color: #fafafa;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.2s;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+}
+
+a.btn-sm {
+    padding: 5px 10px;
+    background-color: #263238;
+    text-decoration: none;
+    color: #fafafa;
+    transition: all 0.2s;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+}
+
+.hero i {
+    margin-right: 10px;
+}
+
+.btn:hover, a.btn-sm:hover {
+    background-color: #fafafa;
+    color: #263238;
+}
+
+@keyframes slidein {
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+section:not(.hero), footer {
+    padding: 30px 100px;
+}
+
+section.articles {
+    background-image: url("../images/parallax.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+article.featured {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 2px #555;
+}
+
+article.featured div.content {
+    flex-basis: 30%;
+    flex-grow: 1;
+    padding: 20px 30px;
+}
+
+.articles article {
+    background-color: #fafafa;
+    color: #555;
+}
+
+article h2 {
+    text-transform: uppercase;
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+article p {
+    text-align: justify;
+    margin: 10px 0;
+}   
+
+article.featured div.image {
+    flex-basis: 70%;
+    min-height: 500px;
+    flex-grow: 1;
+    background-image: url("../images/article.jpg");
+    background-position: center;
+    background-size: cover; 
+}
+
+.cards {
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex-basis: 32%;
+    box-shadow: 0 2px 2px #555;
+    margin-bottom: 20px;
+}
+
+.card div.image > img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card div.content {
+    padding: 15px;
+}
+
+section.quote {
+    display: flex;
+    background-color: #263238;
+    min-height: 200px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.quote {
+    color: #fafafa;
+}
+
+.quote p {
+    font-size: 20px;
+}
+
+.quote a.btn {
+    background-color: #3d515b;
+}
+
+.quote a.btn:hover {
+    background-color: #fafafa;
+}
+
+section.info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #555;
+    flex-wrap: wrap;
+}
+
+input {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #263238;
+    background-color: transparent;
+}
+
+form > button {
+    width: 100%;
+}
+
+.info form {
+    padding: 30px;
+    flex-basis: 50%;
+}
+
+.info ul {
+    list-style-type: none;
+    padding: 0 30px;
+    flex-basis: 50%;
+}
+
+.info ul li {
+    padding: 20px 25px;
+}
+
+.info ul li:not(:first-child) {
+    border-top: 1px solid rgba(38, 50, 56, 0.3);
+}
+
+.info li > i {
+    margin-right: 10px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social a {
+    display: block;
+    margin: 0 10px;
+    padding: 10px;
+    width: 60px;
+    text-align: center;
+    color: #222222;
+    background-color:#B0BEC5;
+}
+
+.social a > i {
+    opacity: 0.75;
+    transition: all 0.2s;
+}
+
+.social a:hover > i {
+    opacity: 1;
+}
+
+footer {
+    background-color: #263238;
+    color: #fafafa;
+}
+
+footer a {
+    color: #fafafa;
+    border-bottom: 1px solid #666;
+}
+
+@media screen and (max-width: 1024px) {
+    section:not(.hero), footer {
+        padding: 30px 60px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    section:not(.hero), footer {
+        padding: 30px 30px;
+    }
+
+    .card {
+        flex-basis: 49%;
+        box-shadow: 0 2px 2px #555;
+        margin-bottom: 20px;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header > h2 {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .info ul, .info form {
+        flex-basis: 100%;
+    } 
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    section.quote {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .card {
+        flex-basis: 100%;
+    }
+
+    .hero h1 {
+        font-size: 40px
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
